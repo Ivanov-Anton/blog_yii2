@@ -1,0 +1,13 @@
+<?php
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
+//print_r(PDO::getAvailableDrivers());
+
+try {
+	$myPDO = new PDO("pgsq:host=217.182.51.243;dbname=antondb", "postgres", "admin");
+	echo "Connected to Postgresql with PDO!";
+} catch (PDOException $e) {
+	echo $e->getMessage();	
+}

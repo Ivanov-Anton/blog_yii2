@@ -12,6 +12,19 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'js'=>[]
+                ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [],
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js'=>[]
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'PnUS5gLr9CRNe_gy82OaNB6X6Vf5oGzu',

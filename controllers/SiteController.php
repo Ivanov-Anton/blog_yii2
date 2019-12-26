@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Airbagua_posts;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -61,7 +62,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $posts = Airbagua_posts::find()->all();
+
+        return $this->render('index',[
+            'posts' => $posts
+        ]);
     }
 
     /**
